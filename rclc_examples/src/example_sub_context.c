@@ -67,7 +67,7 @@ int main(int argc, const char * argv[])
   rcl_ret_t rc;
 
   // within main, we can create the state information our subscriptions work with
-  const unsigned int n_topics = 3;
+  enum { n_topics = 3 };
   const char * topic_names[] = {"topic_foo", "topic_bar", "topic_baz"};
   sub_context_t my_contexts[] = {
     {0, "foo counting from zero"},
